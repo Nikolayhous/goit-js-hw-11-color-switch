@@ -17,42 +17,22 @@ refs.btnStop.addEventListener('click', onClickStopColors);
 
 
 
+  const randomIntegerFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
 
+ function toClickStartColors() {
+    timerId = setInterval(() => {
+    refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
+}, DELAY);
+    refs.btnStart.disabled = true;
 
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   const randomIntegerFromInterval = (min, max) => {
-//     return Math.floor(Math.random() * (max - min + 1) + min);
-//   };
-
-//  function toClickStartColors() {
-//     timerId = setInterval(() => {
-//     refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length)];
-// }, DELAY);
-//     refs.btnStart.disabled = true;
-
-// };
-
-// function onClickStopColors() {
-//  clearInterval(timerId);
-//  refs.btnStart.disabled = false;
-// };
+function onClickStopColors() {
+ clearInterval(timerId);
+ refs.btnStart.disabled = false;
+};
 
 
 

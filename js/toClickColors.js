@@ -20,6 +20,7 @@ refs.btnStop.addEventListener('click', onClickStopColors);
   };
 
  function toClickStartColors() {
+   
     timerId = setInterval(() => {
     refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
     refs.btnStop.classList.add('btnStop');

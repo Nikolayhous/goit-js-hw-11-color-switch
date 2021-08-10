@@ -33,7 +33,6 @@ refs.btnStop.addEventListener('click', onClickStopColors);
 function onClickStopColors() {
   refs.btnStart.classList.add('btnStart');
   refs.btnStop.classList.remove('btnStop');
-  refs.body.style.backgroundColor = '';
  clearInterval(timerId);
  refs.btnStart.disabled = false;
 };
